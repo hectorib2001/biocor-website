@@ -68,12 +68,16 @@ Route::get('/', function () {
             'role' => 'Cirujano cardiovascular',
             'description' => 'Especialista en cirugía del corazón con amplia trayectoria.',
             'image' => 'ArturoBarrientos.webp',
+            'imageWidth' => 318,
+            'imageHeight' => 425,
         ],
         [
             'name' => 'Dr. Luis Renjel',
             'role' => 'Cardiólogo · Arritmias',
             'description' => 'Experto en arritmias y seguimiento postoperatorio.',
             'image' => 'LuisRenjel.webp',
+            'imageWidth' => 532,
+            'imageHeight' => 500,
         ],
     ];
 

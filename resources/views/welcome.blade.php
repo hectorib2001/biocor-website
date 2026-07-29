@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-K2JRXKJP');</script>
-      <!-- End Google Tag Manager -->
-
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X95MJBMSDS"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-X95MJBMSDS');
-      </script>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Biocor · Centro de Enfermedades Cardiovasculares</title>
+      <link rel="preconnect" href="https://www.googletagmanager.com">
+      <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+      <link rel="preload" as="font" type="font/woff2" href="{{ asset('fonts/clear-sans-400.woff2') }}" crossorigin>
+      <link rel="preload" as="font" type="font/woff2" href="{{ asset('fonts/clear-sans-700.woff2') }}" crossorigin>
       <!-- TODO: replace https://www.biocor.bo throughout (here, sitemap.xml, robots.txt, structured-data partial) once the production domain is finalized -->
       <meta name="description" content="Biocor es un centro de enfermedades cardiovasculares en Santa Cruz de la Sierra, Bolivia, con más de 25 años de experiencia. Consultas y estudios cardiológicos (ecocardiograma, Holter, prueba de esfuerzo) realizados por médicos especialistas.">
       <link rel="canonical" href="https://www.biocor.bo/">
@@ -42,6 +29,24 @@
 
       @vite(['resources/css/website/landing.css', 'resources/js/website/landing.js'])
       @include('partials.structured-data')
+
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-K2JRXKJP');</script>
+      <!-- End Google Tag Manager -->
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X95MJBMSDS"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X95MJBMSDS');
+      </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -54,17 +59,17 @@
       <div class="wrap">
         <div class="left">
           <a href="#contacto">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.3-9.3-10A5 5 0 0112 7a5 5 0 019.3 4C19 15.7 12 21 12 21z"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.3-9.3-10A5 5 0 0112 7a5 5 0 019.3 4C19 15.7 12 21 12 21z"/></svg>
             Centro de Enfermedades Cardiovasculares · Santa Cruz de la Sierra
           </a>
         </div>
         <div class="right">
           <a href="tel:+59176656449">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg>
             (+591) 76 656-449
           </a>
           <a href="https://wa.me/59176656449">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
             WhatsApp
           </a>
         </div>
@@ -92,12 +97,13 @@
           </ul>
         </nav>
         <a href="https://wa.me/59176656449" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
           Agendar cita
         </a>
       </div>
     </header>
 
+    <main>
     <!-- HERO -->
     <section class="hero" style="padding:0">
       <div class="wrap">
@@ -107,7 +113,7 @@
           <p class="lead">La confianza que ya conoces, ahora más cerca de ti. Consultas y estudios cardiológicos especializados, en un solo lugar.</p>
           <div class="cta-row">
             <a href="https://wa.me/59176656449" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
               Agendar por WhatsApp
             </a>
             <a href="#servicios" class="btn btn-ghost">Ver nuestros estudios</a>
@@ -120,7 +126,7 @@
         </div>
         <div class="hero-media reveal">
           <div class="photo">
-            <img src="{{ asset('images/Biocor/Equipment.webp') }}" alt="Ecocardiograma realizado por el equipo médico de Biocor">
+            <img src="{{ asset('images/Biocor/Equipment.webp') }}" alt="Ecocardiograma realizado por el equipo médico de Biocor" width="6016" height="4000" fetchpriority="high">
           </div>
           <div class="badge">
             <div>
@@ -143,21 +149,21 @@
         <div class="value-grid">
           <div class="value reveal">
             <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3>Confianza</h3>
             <p>Entre el doctor y su paciente, con la seguridad de que el diagnóstico es el correcto.</p>
           </div>
           <div class="value reveal">
             <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 7L9 18l-5-5"/><path d="M3 12a9 9 0 1118 0"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 7L9 18l-5-5"/><path d="M3 12a9 9 0 1118 0"/></svg>
             </div>
             <h3>Responsabilidad</h3>
             <p>Con nuestros pacientes y con la sociedad. Nuestra experiencia nos respalda.</p>
           </div>
           <div class="value reveal">
             <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg>
             </div>
             <h3>Empatía</h3>
             <p>Con nuestros pacientes y sus familias: comunicamos siempre la verdad, pero de manera empática.</p>
@@ -186,7 +192,7 @@
         <div class="serv-grid" id="servGrid">
           @foreach ($services as $service)
             <article class="serv reveal">
-              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{!! $service['icon'] !!}</svg></div>
+              <div class="ic"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{!! $service['icon'] !!}</svg></div>
               <h3>{{ $service['name'] }}</h3><p>{{ $service['description'] }}</p>
             </article>
           @endforeach
@@ -199,7 +205,7 @@
         <div class="consultas reveal">
           @foreach ($consultations as $consultation)
             <span class="chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               {{ $consultation }}
             </span>
           @endforeach
@@ -219,8 +225,8 @@
           @foreach ($team as $doctor)
             <article class="doc reveal">
               <div class="ph">
-                <img src="{{ asset('images/Biocor/' . $doctor['image']) }}" alt="{{ $doctor['name'] }}" onerror="this.style.display='none';this.nextElementSibling.style.display=''">
-                <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="#33523a" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+                <img src="{{ asset('images/Biocor/' . $doctor['image']) }}" alt="{{ $doctor['name'] }}, {{ $doctor['role'] }} en Biocor" width="{{ $doctor['imageWidth'] }}" height="{{ $doctor['imageHeight'] }}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display=''">
+                <svg aria-hidden="true" style="display:none" viewBox="0 0 24 24" fill="none" stroke="#33523a" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
               </div>
               <div class="body"><h3>{{ $doctor['name'] }}</h3><div class="role">{{ $doctor['role'] }}</div><div class="desc">{{ $doctor['description'] }}</div></div>
             </article>
@@ -282,7 +288,7 @@
           <h2>Fácil de encontrar, fácil de contactar</h2>
           <div class="row">
             <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
               <b>Dirección</b>
@@ -291,7 +297,7 @@
           </div>
           <div class="row">
             <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg>
             </div>
             <div>
               <b>Teléfono</b>
@@ -300,7 +306,7 @@
           </div>
           <div class="row">
             <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
             </div>
             <div>
               <b>Horario de atención</b>
@@ -309,7 +315,7 @@
           </div>
           <div class="cta-row">
             <a href="https://wa.me/59176656449" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
               Escríbenos por WhatsApp
             </a>
             <a href="https://maps.app.goo.gl/JJxzzgSV3jFd4eWb7" target="_blank" rel="noopener" class="btn btn-clay">Cómo llegar</a>
@@ -329,6 +335,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
@@ -344,11 +351,11 @@
             <p style="max-width:34ch">Centro de Enfermedades Cardiovasculares. Más de 25 años de experiencia cuidando la salud del corazón en Santa Cruz de la Sierra.</p>
             <div class="footer-social">
               <a href="https://www.instagram.com/biocor.bo/" target="_blank" rel="noopener" aria-label="Instagram de Biocor">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
                 Instagram
               </a>
               <a href="https://www.facebook.com/pages/Biocor/366415400103584" target="_blank" rel="noopener" aria-label="Facebook de Biocor">
-                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
                 Facebook
               </a>
             </div>
@@ -377,7 +384,7 @@
     </footer>
 
     <a href="https://wa.me/59176656449" class="fab" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 3.9A10 10 0 003.5 18L2 22l4.1-1.5A10 10 0 1020 3.9zm-8 16a8 8 0 01-4-1l-.3-.2-2.4.9.8-2.4-.2-.3a8 8 0 1110.6 2.9A8 8 0 0112 19.9z"/></svg>
     </a>
 
   </body>
