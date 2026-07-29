@@ -1,2 +1,5 @@
 User-agent: *
 Disallow:
+
+# TODO: replace https://www.biocor.bo with the production domain once finalized
+Sitemap: https://www.biocor.bo/sitemap.xml

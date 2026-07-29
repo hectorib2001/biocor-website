@@ -21,16 +21,33 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Biocor · Centro de Enfermedades Cardiovasculares</title>
+      <!-- TODO: replace https://www.biocor.bo throughout (here, sitemap.xml, robots.txt, structured-data partial) once the production domain is finalized -->
+      <meta name="description" content="Biocor es un centro de enfermedades cardiovasculares en Santa Cruz de la Sierra, Bolivia, con más de 25 años de experiencia. Consultas y estudios cardiológicos (ecocardiograma, Holter, prueba de esfuerzo) realizados por médicos especialistas.">
+      <link rel="canonical" href="https://www.biocor.bo/">
+      <meta name="geo.region" content="BO-S">
+      <meta name="geo.placename" content="Santa Cruz de la Sierra">
+
+      <meta property="og:type" content="business.business">
+      <meta property="og:site_name" content="Biocor">
+      <meta property="og:title" content="Biocor · Centro de Enfermedades Cardiovasculares">
+      <meta property="og:description" content="Consultas y estudios cardiológicos especializados en Santa Cruz de la Sierra, Bolivia. Más de 25 años cuidando la salud del corazón.">
+      <meta property="og:url" content="https://www.biocor.bo/">
+      <meta property="og:image" content="{{ asset('images/Biocor/Equipment.jpg') }}">
+      <meta property="og:locale" content="es_BO">
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Biocor · Centro de Enfermedades Cardiovasculares">
+      <meta name="twitter:description" content="Consultas y estudios cardiológicos especializados en Santa Cruz de la Sierra, Bolivia. Más de 25 años cuidando la salud del corazón.">
+      <meta name="twitter:image" content="{{ asset('images/Biocor/Equipment.jpg') }}">
+
       @vite(['resources/css/website/landing.css', 'resources/js/website/landing.js'])
+      @include('partials.structured-data')
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2JRXKJP"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Aviso de prototipo (quitar en producción) -->
-    <div class="proto-note">Prototipo de demostración · Las fotografías, nombres y datos de contacto son marcadores de posición pendientes de los reales de Biocor.</div>
 
     <!-- Barra superior de contacto -->
     <div class="topbar">
@@ -70,6 +87,7 @@
             <li><a href="#consultas">Consultas</a></li>
             <li><a href="#equipo">Equipo</a></li>
             <li><a href="#valores">Nosotros</a></li>
+            <li><a href="#faq">Preguntas</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
@@ -165,33 +183,26 @@
           <h2>Todo para tu corazón, en un solo lugar</h2>
           <p>Diagnóstico cardiológico avanzado sin derivaciones externas, con explicaciones claras y sin tecnicismos.</p>
         </div>
-        <div class="serv-grid" id="servGrid"></div>
+        <div class="serv-grid" id="servGrid">
+          @foreach ($services as $service)
+            <article class="serv reveal">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{!! $service['icon'] !!}</svg></div>
+              <h3>{{ $service['name'] }}</h3><p>{{ $service['description'] }}</p>
+            </article>
+          @endforeach
+        </div>
 
         <div class="sec-head reveal" id="consultas" style="margin-top:64px;margin-bottom:18px">
           <span class="eyebrow">Consultas médicas</span>
           <h2 style="font-size:1.7rem">Atención integral, especialistas a tu alcance</h2>
         </div>
         <div class="consultas reveal">
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Cardiología clínica
-          </span>
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Cirugía cardiovascular
-          </span>
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Arritmias y postoperatorio
-          </span>
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Endocrinología
-          </span>
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Nutrición
-          </span>
+          @foreach ($consultations as $consultation)
+            <span class="chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              {{ $consultation }}
+            </span>
+          @endforeach
         </div>
       </div>
     </section>
@@ -204,7 +215,17 @@
           <h2>Conoce a quienes cuidarán de ti</h2>
           <p>Médicos especialistas que combinan tecnología de precisión con un trato cercano y honesto.</p>
         </div>
-        <div class="team-grid" id="teamGrid"></div>
+        <div class="team-grid" id="teamGrid">
+          @foreach ($team as $doctor)
+            <article class="doc reveal">
+              <div class="ph">
+                <img src="{{ asset('images/Biocor/' . $doctor['image']) }}" alt="{{ $doctor['name'] }}" onerror="this.style.display='none';this.nextElementSibling.style.display=''">
+                <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="#33523a" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+              </div>
+              <div class="body"><h3>{{ $doctor['name'] }}</h3><div class="role">{{ $doctor['role'] }}</div><div class="desc">{{ $doctor['description'] }}</div></div>
+            </article>
+          @endforeach
+        </div>
       </div>
     </section>
 
@@ -215,7 +236,33 @@
           <span class="eyebrow">Testimonios</span>
           <h2>La confianza de quienes ya nos eligieron</h2>
         </div>
-        <div class="tst-grid" id="tstGrid"></div>
+        <div class="tst-grid" id="tstGrid">
+          @foreach ($testimonials as $testimonial)
+            <article class="tst reveal">
+              <div class="stars">★★★★★</div>
+              <blockquote>&ldquo;{{ $testimonial['quote'] }}&rdquo;</blockquote>
+              <div class="who"><div class="av">{{ mb_substr($testimonial['name'], 0, 1) }}</div><div><b>{{ $testimonial['name'] }}</b><span>{{ $testimonial['role'] }}</span></div></div>
+            </article>
+          @endforeach
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background:var(--paper-2)">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Todo lo que necesitas saber</h2>
+        </div>
+        <div class="faq-list reveal">
+          @foreach ($faqs as $faq)
+            <details class="faq-item">
+              <summary>{{ $faq['question'] }}</summary>
+              <p>{{ $faq['answer'] }}</p>
+            </details>
+          @endforeach
+        </div>
       </div>
     </section>
 
@@ -311,6 +358,7 @@
             <a href="#servicios">Estudios especializados</a>
             <a href="#consultas">Consultas médicas</a>
             <a href="#equipo">Nuestro equipo</a>
+            <a href="#faq">Preguntas frecuentes</a>
           </div>
           <div>
             <h4>Contacto</h4>
