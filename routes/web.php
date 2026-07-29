@@ -67,31 +67,13 @@ Route::get('/', function () {
             'name' => 'Dr. Arturo Barrientos',
             'role' => 'Cirujano cardiovascular',
             'description' => 'Especialista en cirugía del corazón con amplia trayectoria.',
-            'image' => 'ArturoBarrientos.jpg',
+            'image' => 'ArturoBarrientos.webp',
         ],
         [
             'name' => 'Dr. Luis Renjel',
             'role' => 'Cardiólogo · Arritmias',
             'description' => 'Experto en arritmias y seguimiento postoperatorio.',
-            'image' => 'LuisRenjel.jpg',
-        ],
-        [
-            'name' => 'Dr. Julio Zamora',
-            'role' => 'Cardiólogo',
-            'description' => 'Cardiología general con enfoque en prevención y diagnóstico.',
-            'image' => 'JulioZamora.jpg',
-        ],
-        [
-            'name' => 'Dra. Mariela Sánchez',
-            'role' => 'Endocrinología',
-            'description' => 'Atención integral del sistema endocrino y metabólico.',
-            'image' => 'MarielaSanchez.jpg',
-        ],
-        [
-            'name' => 'Lic. Ximena Sonco',
-            'role' => 'Nutrición',
-            'description' => 'Acompañamiento nutricional para la salud del corazón.',
-            'image' => 'XimenaSonco.jpg',
+            'image' => 'LuisRenjel.webp',
         ],
     ];
 

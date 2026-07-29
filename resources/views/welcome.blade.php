@@ -32,13 +32,13 @@
       <meta property="og:title" content="Biocor · Centro de Enfermedades Cardiovasculares">
       <meta property="og:description" content="Consultas y estudios cardiológicos especializados en Santa Cruz de la Sierra, Bolivia. Más de 25 años cuidando la salud del corazón.">
       <meta property="og:url" content="https://www.biocor.bo/">
-      <meta property="og:image" content="{{ asset('images/Biocor/Equipment.jpg') }}">
+      <meta property="og:image" content="{{ asset('images/Biocor/Equipment.webp') }}">
       <meta property="og:locale" content="es_BO">
 
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Biocor · Centro de Enfermedades Cardiovasculares">
       <meta name="twitter:description" content="Consultas y estudios cardiológicos especializados en Santa Cruz de la Sierra, Bolivia. Más de 25 años cuidando la salud del corazón.">
-      <meta name="twitter:image" content="{{ asset('images/Biocor/Equipment.jpg') }}">
+      <meta name="twitter:image" content="{{ asset('images/Biocor/Equipment.webp') }}">
 
       @vite(['resources/css/website/landing.css', 'resources/js/website/landing.js'])
       @include('partials.structured-data')
@@ -120,7 +120,7 @@
         </div>
         <div class="hero-media reveal">
           <div class="photo">
-            <img src="{{ asset('images/Biocor/Equipment.jpg') }}" alt="Ecocardiograma realizado por el equipo médico de Biocor">
+            <img src="{{ asset('images/Biocor/Equipment.webp') }}" alt="Ecocardiograma realizado por el equipo médico de Biocor">
           </div>
           <div class="badge">
             <div>
