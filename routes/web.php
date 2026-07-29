@@ -76,8 +76,8 @@ Route::get('/', function () {
             'role' => 'Cardiólogo · Arritmias',
             'description' => 'Experto en arritmias y seguimiento postoperatorio.',
             'image' => 'LuisRenjel.webp',
-            'imageWidth' => 532,
-            'imageHeight' => 500,
+            'imageWidth' => 816,
+            'imageHeight' => 767,
         ],
     ];
 

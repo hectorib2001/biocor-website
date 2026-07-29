@@ -114,7 +114,7 @@ h3 {
 }
 
 .logo .name b {
-  color: var(--green-600);
+  color: var(--green-700);
 }
 
 .heartbeat path {
@@ -126,6 +126,7 @@ h3 {
   stroke-dasharray: 120;
   stroke-dashoffset: 120;
   animation: beat 3.2s ease-in-out infinite;
+  will-change: stroke-dashoffset;
 }
 
 .heartbeat .organ {
@@ -263,13 +264,13 @@ header.nav {
 }
 
 .btn-primary {
-  background: var(--green-600);
+  background: var(--green-700);
   color: #fff;
   box-shadow: 0 8px 20px -8px rgba(45, 179, 54, .6);
 }
 
 .btn-primary:hover {
-  background: var(--green-700);
+  background: var(--green-900);
   transform: translateY(-2px);
 }
 
@@ -317,7 +318,7 @@ header.nav {
 }
 
 .hero h1 .accent {
-  color: var(--green-600);
+  color: var(--green-700);
 }
 
 .hero p.lead {
@@ -988,7 +989,7 @@ footer .grid {
   gap: 36px;
 }
 
-footer h4 {
+footer h3 {
   color: #fff;
   font-size: 1rem;
   margin-bottom: 14px;
@@ -1045,6 +1046,7 @@ footer .bottom {
   place-items: center;
   box-shadow: 0 10px 26px -8px rgba(37, 211, 102, .7);
   animation: fab 2.6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .fab svg {

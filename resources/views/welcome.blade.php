@@ -27,7 +27,8 @@
       <meta name="twitter:description" content="Consultas y estudios cardiológicos especializados en Santa Cruz de la Sierra, Bolivia. Más de 25 años cuidando la salud del corazón.">
       <meta name="twitter:image" content="{{ asset('images/Biocor/Equipment.webp') }}">
 
-      @vite(['resources/css/website/landing.css', 'resources/js/website/landing.js'])
+      <style>{!! Vite::content('resources/css/website/landing.css') !!}</style>
+      @vite(['resources/js/website/landing.js'])
       @include('partials.structured-data')
 
       <!-- Google Tag Manager -->
@@ -37,16 +38,6 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-K2JRXKJP');</script>
       <!-- End Google Tag Manager -->
-
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-X95MJBMSDS"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-X95MJBMSDS');
-      </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -126,7 +117,7 @@
         </div>
         <div class="hero-media reveal">
           <div class="photo">
-            <img src="{{ asset('images/Biocor/Equipment.webp') }}" alt="Ecocardiograma realizado por el equipo médico de Biocor" width="6016" height="4000" fetchpriority="high">
+            <img src="{{ asset('images/Biocor/Equipment.webp') }}" alt="Ecocardiograma realizado por el equipo médico de Biocor" width="1280" height="851" fetchpriority="high">
           </div>
           <div class="badge">
             <div>
@@ -361,14 +352,14 @@
             </div>
           </div>
           <div>
-            <h4>Servicios</h4>
+            <h3>Servicios</h3>
             <a href="#servicios">Estudios especializados</a>
             <a href="#consultas">Consultas médicas</a>
             <a href="#equipo">Nuestro equipo</a>
             <a href="#faq">Preguntas frecuentes</a>
           </div>
           <div>
-            <h4>Contacto</h4>
+            <h3>Contacto</h3>
             <a href="tel:+59176656449">(+591) 76 656-449</a>
             <a href="https://wa.me/59176656449">WhatsApp</a>
             <a href="#contacto">Ubicación</a>
