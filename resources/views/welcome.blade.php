@@ -122,7 +122,7 @@
           <div class="badge">
             <div>
               <b>Equipos de última tecnología</b>
-              <span>operados por especialistas, no por técnicos genéricos</span>
+              <span>operados por especialistas.</span>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@
       <div class="wrap reveal">
         <span class="mark-q">"</span>
         <blockquote>Cuando se trata de la salud del corazón, las personas no buscan opciones: buscan certeza y la confianza de estar en buenas manos.</blockquote>
-        <p>Por eso en Biocor los estudios se realizan con maquinaria de última tecnología y son operados directamente por médicos especialistas altamente formados.</p>
+        <p>Por eso en Biocor los estudios se realizan con maquinas de última tecnología y son atendidos directamente por médicos especialistas altamente formados.</p>
       </div>
     </section>
 
@@ -227,7 +227,7 @@
     </section>
 
     <!-- TESTIMONIOS -->
-    <section>
+    <!--<section>
       <div class="wrap">
         <div class="sec-head reveal">
           <span class="eyebrow">Testimonios</span>
@@ -243,7 +243,7 @@
           @endforeach
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!-- FAQ -->
     <section id="faq" style="background:var(--paper-2)">

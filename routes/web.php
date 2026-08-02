@@ -67,7 +67,7 @@ Route::get('/', function () {
             'name' => 'Dr. Arturo Barrientos',
             'role' => 'Cirujano cardiovascular',
             'description' => 'Especialista en cirugía del corazón con amplia trayectoria.',
-            'image' => 'ArturoBarrientos.webp',
+            'image' => 'ArturoBarrientosFerrufino.webp',
             'imageWidth' => 318,
             'imageHeight' => 425,
         ],
